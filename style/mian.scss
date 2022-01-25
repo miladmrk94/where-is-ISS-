@@ -1,0 +1,97 @@
+@font-face {
+  font-family: "HIGHSPEED";
+  src: url("../HIGHSPEED.TTF");
+  font-family: "AlphaDigital";
+  src: url("../AlphaDigital.ttf");
+}
+html,
+body {
+  height: 100vh;
+  margin: 0;
+  background: url("../img/E.jpg") no-repeat left top;
+  background-size: 100%;
+}
+
+.div-root {
+  padding: 0;
+  margin: 0;
+
+  div {
+    background-color: rgba(26, 156, 243, 0.562);
+    display: flex;
+    flex-direction: column;
+    margin: 0.3rem;
+    border-radius: 0.5rem;
+    text-align: center;
+    box-shadow: rgba(4, 64, 92, 0.35) 0px 5px 10px;
+    img {
+      border-radius: 0.5rem 0.5rem 0 0;
+    }
+    span {
+      padding: 1rem;
+      font-family: "HIGHSPEED";
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: aliceblue;
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  .col-lg-2 {
+    flex: 0 0 auto;
+    width: 13.66666667%;
+  }
+}
+
+.iss-root {
+  top: 5rem;
+  left: ;
+  animation: iss 5s infinite alternate-reverse ease-in-out;
+  z-index: 0;
+}
+
+.container-root {
+  z-index: 1;
+  height: 100vh;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 0.5fr 0.5fr;
+  grid-template-rows: 0.6fr 0.4fr 0.6fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "map ."
+    "div-text div-text"
+    "div-images div-images";
+  .h3-root {
+    font-family: "AlphaDigital";
+    font-size: 2.3rem;
+    color: blue;
+  }
+  #issMap {
+    border-radius: 1rem;
+    margin: 1rem;
+    height: 400px;
+    width: 400px;
+    grid-area: map;
+    box-shadow: rgba(4, 64, 92, 0.35) 0px 5px 10px;
+  }
+
+  .div-text {
+    grid-area: div-text;
+  }
+
+  .div-images {
+    grid-area: div-images;
+  }
+}
+
+@keyframes iss {
+  from {
+    transform: translateY(40px) rotate(20deg);
+  }
+  to {
+    transform: translateY(0) rotate(24deg);
+  }
+}
